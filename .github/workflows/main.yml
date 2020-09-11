@@ -15,3 +15,5 @@ jobs:
         id: hello
         with:
           who-to-greet: "Mona the Octocat 12345"
+      - name: Get the output time and who to greet
+        run: echo "The time was ${{ steps.hello.outputs.time }} greeted ${{ steps.hello.outputs.person }}"
